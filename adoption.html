@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adopt</title>
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="imgs/favicon.png">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<a class="skip-link" href='#main'>Skip to content</a>
+	<nav>
+		<ul>
+			<li><a href = "index.html">Home</a></li>
+			<li><a href = "about.html">About</a></li>
+			<li><a href = "care.html">Care</a></li>
+			<li><a href = "adoption.html" class='active-page'>Adopt</a></li>
+		</ul>
+	</nav>
+	<h1>puppies </h1>
+	<h2> plural noun</h2>
+	<h3>1: a young domestic dog</h3>
+</header>
+<main id = "main" class = "adoptcontainer">
+	<form action="https://formspree.io/f/xrgokzjp" method="POST">
+		<fieldset>
+			<legend>Adoption Interest Form</legend>
+			<label for = "name_id">Name</label>
+			<input type="text" placeholder="Enter Your Name" name = "Name" id = "name_id">
+		
+			<label for  = "email_id">Email</label>
+			<input type="email" placeholder="Enter Your Email" name  = "Email" id = "email_id">
+
+			<label for  = "num_id">Phone Number</label>
+			<input type="tel" placeholder="123-456-7899" name = "digits" id = "num_id" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+		
+			<label for = "message_id" class = 'Breed'>Breed</label>
+			<textarea name  = "textarea" placeholder="Tell us about the type of puppy you are looking to adopt!" id = "message_id" class = "box"></textarea>
+		
+			<input type="submit" value = "Submit Form!" class= "submit">
+		</fieldset>
+	</form>
+</main>
+<footer>
+<p>Emily Bass Portfolio &copy; 2020</p> 
+</footer>
+</body>
+</html>

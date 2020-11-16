@@ -1,0 +1,335 @@
+header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 50px;
+}
+
+h1{
+	font-size: 3em; 
+	font-family: 'Crimson Text', serif;
+	color: rgb(64, 128, 0);
+	animation-name: cool;
+	animation-duration: 10s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
+}
+
+@keyframes cool{
+	from{color:black;}
+	to{color:rgb(64, 128, 0);}
+}
+
+h2{
+	flex-direction: row;
+	font-family: 'Crimson Text', serif;
+	color: black;
+}
+
+h3{
+	font-size: 1em;
+	font-family: 'Inter', sans-serif;
+	color: black;
+}
+
+.active-page{
+	text-decoration: underline;
+	font-size: 1.2em;
+}
+
+.skip-link {
+	top: -50px;
+	padding: 4px;
+	position: absolute;
+	transform: translateY(-100%);
+  }
+  
+.skip-link:focus {
+	transform: translateY(0%);
+}
+
+.skip-link {
+	transition: transform 0.3s;
+}
+
+nav{
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Inter', sans-serif;
+	padding:10px;
+}
+
+nav a{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-decoration: none;
+	font-size: 1em;
+	color: rgb(38, 77, 0);
+	align-items: center;
+	width: 100%;
+  }
+
+nav a:hover{
+	background-color: rgb(230, 255, 230);
+	color:rgb(77, 38, 0);
+	font-size: 1.5em;
+}
+body{
+	background-color: white;
+	margin: auto;
+	padding: 20px;
+}
+
+
+.container{
+	/*Your Code Here*/
+	font-family: 'Inter', sans-serif;
+	padding-top: 30px;
+	display: grid;
+	grid-row-gap: 15px;
+	grid-column-gap: 15px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, auto);
+  }
+
+  .firstpup .secondpup .thirdpup .fourthpup .fifthpup .sixthpup{
+	grid-column: 1 span 1;
+	max-height: 300px;
+	overflow: hidden;
+  }
+  
+  .firstpup:hover{
+	border-style: inset;
+	border-color: rgb(230, 255, 230);
+	border-width: 5px;
+  }
+  .secondpup:hover{
+	border-style: inset;
+	border-color: rgb(230, 255, 230);
+	border-width: 5px;
+  }
+  .thirdpup:hover{
+	border-style: inset;
+	border-color: rgb(230, 255, 230);
+	border-width: 5px;
+  }
+
+  .fourthpup:hover{
+	border-style: inset;
+	border-color: rgb(230, 255, 230);
+	border-width: 5px;
+  }
+  .fifthpup:hover{
+	border-style: inset;
+	border-color: rgb(230, 255, 230);
+	border-width: 5px;
+  }
+  .sixthpup:hover{
+	border-style: inset;
+	border-color: rgb(230, 255, 230);
+	border-width: 5px;
+  }
+
+/* about page CSS*/
+.aboutcontainer{
+	font-family: 'Inter', sans-serif;
+	padding-top: 30px;
+	display: grid;
+	grid-row-gap: 15px;
+	grid-column-gap: 15px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, auto);
+	justify-content: space-evenly;
+	align-content: start;
+	vertical-align: middle;
+	padding-bottom: 20px;
+}
+
+.info{
+	grid-column: 1 / span 1;
+}
+
+.puppypic{
+	grid-column: 2 / span 1;
+}
+
+.info2{
+	grid-column: 1 / span 1;
+}
+
+.pup2{
+	grid-column: 2 / span 1;
+}
+
+.info3{
+	grid-column: 1 / span 1;
+}
+
+.pup3{
+	grid-column: 2 / span 1;
+}
+
+/* care page */
+
+.carecontainer{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+}
+
+.carecontainer > div {
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+	margin: 10px;
+	line-height: 30px;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+
+/*end of care page */
+
+footer{
+	font-family: 'Inter', sans-serif;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	color: rgb(38, 77, 0);
+	text-align: center;
+}
+
+
+/* Adoption questions */
+
+form{
+	padding-bottom: 30px;
+}
+
+legend{ 
+	font-size: 125%;
+	font-style: bold;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Inter', sans-serif;
+	padding-bottom: 20px;
+  }
+  
+  label{
+	display: inline-block;
+	margin-right:10px;
+	font-family: 'Inter', sans-serif;
+  }
+
+  input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+  span{
+	margin-left:30%;
+	font-family: italic;
+	font-weight: bold;
+  }
+  
+  textarea{
+	width: 100%;
+	height: 150px;
+	padding: 12px 10px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+	background-color: rgb(38, 77, 0);
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+  }
+  
+  input[type=submit]:hover {
+	opacity: 0.7;
+  }
+
+  .box{
+	  display: inline-block;
+  }
+
+  @media screen and (min-width: 770px) {
+	form{
+	width: 80%;
+	margin: auto;
+	padding-bottom: 30px;
+	}
+
+	fieldset{
+	margin: auto;
+  	width: 50%;
+  	padding: 10px;
+	}
+
+	label{
+		display: inline-block;
+		margin-right:10px;
+		width: 20%;
+		font-family: 'Inter', sans-serif;
+	}
+	input{
+	  width:100%;
+	  padding-top: 10px;
+	}
+  
+	textarea{
+	  width:100%;
+	  height: 150px;
+   }
+   
+   .Breed{
+	   padding-top: 10px;
+	   vertical-align: top;
+   }
+   input[type=submit] {
+	background-color: rgb(38, 77, 0);
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+  }
+
+
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) { 
+	h1{
+	  animation:none;
+	  animation-duration: 0s;
+	}
+}
+
+
+@media screen and (prefers-reduced-motion) {
+	h1{
+		animation:none;
+		animation-duration: 0s;
+	  }
+ }
+  
