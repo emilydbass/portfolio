@@ -6,6 +6,10 @@ header{
 	padding-bottom: 50px;
 }
 
+main{
+	background-attachment: rgb(248,248,255);
+}
+
 h1{
 	font-size: 3em; 
 	font-family: 'Crimson Text', serif;
@@ -54,7 +58,7 @@ h3{
 }
 
 nav{
-	background-color: white;
+	background-color:rgb(248,248,255);
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -80,56 +84,29 @@ nav a:hover{
 	font-size: 1.5em;
 }
 body{
-	background-color: white;
+	background-color: rgb(248,248,255);
 	margin: auto;
 	padding: 20px;
 }
 
 
 .container{
-	/*Your Code Here*/
 	font-family: 'Inter', sans-serif;
 	padding-top: 30px;
 	display: grid;
 	grid-row-gap: 15px;
 	grid-column-gap: 15px;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(3, auto);
+	grid-template-rows: repeat(2, auto);
   }
 
-  .firstpup .secondpup .thirdpup .fourthpup .fifthpup .sixthpup{
-	grid-column: 1 span 1;
-	max-height: 300px;
-	overflow: hidden;
+  .container img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
   }
   
-  .firstpup:hover{
-	border-style: inset;
-	border-color: rgb(230, 255, 230);
-	border-width: 5px;
-  }
-  .secondpup:hover{
-	border-style: inset;
-	border-color: rgb(230, 255, 230);
-	border-width: 5px;
-  }
-  .thirdpup:hover{
-	border-style: inset;
-	border-color: rgb(230, 255, 230);
-	border-width: 5px;
-  }
-
-  .fourthpup:hover{
-	border-style: inset;
-	border-color: rgb(230, 255, 230);
-	border-width: 5px;
-  }
-  .fifthpup:hover{
-	border-style: inset;
-	border-color: rgb(230, 255, 230);
-	border-width: 5px;
-  }
-  .sixthpup:hover{
+  .container img:hover{
 	border-style: inset;
 	border-color: rgb(230, 255, 230);
 	border-width: 5px;
@@ -179,7 +156,7 @@ body{
 .carecontainer{
 	display: flex;
 	flex-wrap: wrap;
-	background-color: white;
+	background-color: rgb(248,248,255);
 }
 
 .carecontainer > div {
@@ -202,13 +179,62 @@ footer{
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: white;
+	background-color: rgb(248,248,255);
 	color: rgb(38, 77, 0);
 	text-align: center;
 }
 
 
 /* Adoption questions */
+/* flip card css*/
+.flip-card {
+	position: relative;
+  	left: 50%;
+	margin-left: -100px;
+	margin-bottom: 100px;
+	background-color: transparent;
+	width: 200px;
+	height: 200px;
+	perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+	background-color: #bbb;
+	color: black;
+  }
+  
+  .flip-card-back {
+	background-color:rgb(38, 77, 0);
+	color: white;
+	transform: rotateY(180deg);
+  }
+  .flip-card p{
+	font-family: 'Inter', sans-serif;
+	padding: 15px;
+	font-size: 1em;
+  }
 
 form{
 	padding-bottom: 30px;
@@ -271,7 +297,81 @@ legend{
 	  display: inline-block;
   }
 
+
+  /* Desktop*/
   @media screen and (min-width: 770px) {
+/* Home page*/
+	.container{
+	width: 100%;
+	padding-top: 30px;
+	display: grid;
+	grid-row-gap: 20px;
+	grid-column-gap: 20px;
+	grid-template-columns: auto auto;
+	grid-template-rows: repeat(2, auto);
+	justify-items: center;
+	}
+
+	.container div{
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		align-items: center;
+	}
+
+/* flip card css*/
+.flip-card {
+	position: relative;
+  	left: 50%;
+	margin-left: -100px;
+	margin-bottom: 100px;
+	background-color: transparent;
+	width: 200px;
+	height: 200px;
+	perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner, .flip-card:active .flip-card-inner, .flip-card:focus-within .flip-card-inner, .flip-card:focus .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+	background-color: #bbb;
+	color: black;
+  }
+  
+  .flip-card-back {
+	background-color:rgb(38, 77, 0);
+	color: white;
+	transform: rotateY(180deg);
+  }
+  .flip-card.focus-within .flip-card-inner{
+    transform: rotateY(180deg);
+}
+  .flip-card p{
+	font-family: 'Inter', sans-serif;
+	padding: 15px;
+	font-size: 1em;
+  }
+/* Adoption form*/
 	form{
 	width: 80%;
 	margin: auto;
@@ -304,6 +404,7 @@ legend{
 	   padding-top: 10px;
 	   vertical-align: top;
    }
+
    input[type=submit] {
 	background-color: rgb(38, 77, 0);
 	color: white;
@@ -314,14 +415,86 @@ legend{
 	width: 100%;
   }
 
-
-
+/* care page desktop*/
+/* care parallax*/
+.parallax {
+	background-image: url("../imgs/field.jpg");
+	min-height: 600px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  
+.carecontainer{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	margin: 20px;
 }
+
+.carecontainer > div {
+	max-width: 500px;
+	max-height: 400px;
+	margin: 10px;
+	vertical-align: middle;
+	line-height: 20px;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+
+.aboutcontainer{
+	font-family: 'Inter', sans-serif;
+	font-size: 2.2em;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	display: grid;
+	grid-row-gap: 15px;
+	grid-column-gap: 15px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, auto);
+	justify-content: space-evenly;
+	align-content: start;
+	vertical-align: middle;
+	padding-bottom: 20px;
+}
+
+  .dogrunning{
+	position: relative;
+	opacity: 0;
+	top: 10px;
+	animation-iteration-count: 1;
+	padding-bottom: 10px;
+	  -webkit-animation: run 10s;
+  }
+
+  @-webkit-keyframes run {
+	 
+  0% {
+	opacity: 100;
+	left:-20%;
+  }
+	100% {
+	  left:110%;
+	  opacity:0;
+	}
+  }
 
 @media screen and (prefers-reduced-motion: reduce) { 
 	h1{
 	  animation:none;
 	  animation-duration: 0s;
+	}
+	.container img:hover{
+		border-style: none;
+	  }
+	.dogrunning{
+		animation: none;
+		animation-duration: 0s;
 	}
 }
 
@@ -332,4 +505,4 @@ legend{
 		animation-duration: 0s;
 	  }
  }
-  
+  }
