@@ -106,11 +106,7 @@ body{
 	object-fit: cover;
   }
   
-  .container img:hover{
-	border-style: inset;
-	border-color: rgb(230, 255, 230);
-	border-width: 5px;
-  }
+
 
 /* about page CSS*/
 .aboutcontainer{
@@ -131,7 +127,7 @@ body{
 	grid-column: 1 / span 1;
 }
 
-.puppypic{
+.pup1{
 	grid-column: 2 / span 1;
 }
 
@@ -448,8 +444,8 @@ legend{
 
 .aboutcontainer{
 	font-family: 'Inter', sans-serif;
-	font-size: 2.2em;
-	padding-top: 30px;
+	font-size: 1.8em;
+	padding-top: 100px;
 	padding-left: 30px;
 	padding-right: 30px;
 	display: grid;
@@ -462,40 +458,34 @@ legend{
 	vertical-align: middle;
 	padding-bottom: 20px;
 }
+.aboutcontainer > div{
+	margin:auto;
+	height: 300px;
+	width: 550px;
+	overflow: hidden;
+	padding: 20px;
+}
+.pup1 , .pup2, .pup3{
+	 margin: auto;
+     max-width: 100%;
+     width: 100%;
+     height: auto;
+}
 
-  .dogrunning{
-	position: relative;
-	opacity: 0;
-	top: 10px;
-	animation-iteration-count: 1;
-	padding-bottom: 10px;
-	  -webkit-animation: run 10s;
-  }
+iframe{
+	display: block;
+	margin:auto;
+	padding: 20px;
+	-webkit-box-shadow: 10px 10px 6px -6px black;
+}
 
-  @-webkit-keyframes run {
-	 
-  0% {
-	opacity: 100;
-	left:-20%;
-  }
-	100% {
-	  left:110%;
-	  opacity:0;
-	}
-  }
 
 @media screen and (prefers-reduced-motion: reduce) { 
 	h1{
 	  animation:none;
 	  animation-duration: 0s;
 	}
-	.container img:hover{
-		border-style: none;
-	  }
-	.dogrunning{
-		animation: none;
-		animation-duration: 0s;
-	}
+
 }
 
 
