@@ -147,6 +147,15 @@ body{
 	grid-column: 2 / span 1;
 }
 
+iframe{
+	display: block;
+	margin:auto;
+	height:auto;
+	width:auto;
+	padding: 20px;
+	-webkit-box-shadow: 10px 10px 6px -6px black;
+}
+
 /* care page */
 
 .carecontainer{
@@ -172,6 +181,7 @@ body{
 footer{
 	font-family: 'Inter', sans-serif;
 	position: fixed;
+	padding-top: 20px;
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -465,16 +475,19 @@ legend{
 	overflow: hidden;
 	padding: 20px;
 }
+
 .pup1 , .pup2, .pup3{
 	 margin: auto;
      max-width: 100%;
      width: 100%;
-     height: auto;
+	 height: auto;
 }
 
 iframe{
 	display: block;
 	margin:auto;
+	height: 300px;
+	width: 500px;
 	padding: 20px;
 	-webkit-box-shadow: 10px 10px 6px -6px black;
 }
